@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Río Alto | Demolición, desmantelamiento y gestión de RCD en Chile</title>
+<meta name="description" content="Demolición, desmantelamiento, movimiento de tierra, gestión de RCD y reciclaje de material ferroso para minería, industria y construcción, con trazabilidad y certificado de disposición final.">
+<link rel="alternate" hreflang="es" href="./">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="icon" type="image/png" href="assets/img/isotipo.png">
+<meta property="og:title" content="Río Alto | Demolición, desmantelamiento y gestión de RCD en Chile">
+<meta property="og:description" content="Demolición, desmantelamiento, movimiento de tierra, gestión de RCD y reciclaje de material ferroso para minería, industria y construcción, con trazabilidad y certificado de disposición final.">
+<meta property="og:image" content="assets/img/concon.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#102418}
+a{color:#102418}a:hover{color:#4F7A1C}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #88B53A;outline-offset:3px}
+
+/* Intro: a forest-green sheet with a leaf-shaped window over the footage. The sheet scales up until the window fills the screen. */
+.ra2-under{position:fixed;inset:0;z-index:40;background:#102418;pointer-events:none;animation:ra2Fade .6s ease 3.3s forwards}
+.ra2-cut{position:absolute;inset:0;z-index:5;overflow:hidden;pointer-events:none;animation:ra2Fade .5s ease 3.45s forwards}
+.ra2-cut-svg{position:absolute;left:calc(50% - 85px);top:calc(34% - 85px);width:170px;height:170px;overflow:visible;transform-origin:50% 22%;transform:scale(.3);animation:ra2Cut 3.4s cubic-bezier(.7,0,.15,1) .15s forwards}
+@keyframes ra2Cut{0%{transform:scale(.3)}20%{transform:scale(1)}50%{transform:scale(1)}100%{transform:scale(90)}}
+.ra2-cut-word{position:absolute;left:50%;top:calc(34% + 112px);height:40px;width:auto;transform:translateX(-50%);opacity:0;animation:ra2Word 2.2s ease .5s forwards}
+@keyframes ra2Word{0%{opacity:0;transform:translate(-50%,10px)}22%{opacity:1;transform:translate(-50%,0)}60%{opacity:1}80%{opacity:0}100%{opacity:0}}
+@keyframes ra2Fade{to{opacity:0;visibility:hidden}}
+
+/* Footage */
+.ra2-media{position:absolute;inset:0;overflow:hidden;background:#102418 url(assets/img/hero-poster.jpg) center/cover no-repeat}
+.ra2-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Intro photo: ENAP Concón, zoomed so the Río Alto decal sits inside the leaf, then pulls back as the leaf opens and hands over to the video */
+.ra2-intro-photo{position:absolute;inset:0;background:#102418 url(assets/img/concon.jpg) center/cover no-repeat;transform-origin:0 0;transform:translate(-0.7%,-85.7%) scale(1.9);animation:ra2PhotoZoom 1.7s cubic-bezier(.7,0,.15,1) 1.85s forwards,ra2PhotoOut 1s ease 4s forwards}
+@keyframes ra2PhotoZoom{to{transform:translate(0,0) scale(1)}}
+@keyframes ra2PhotoOut{to{opacity:0;visibility:hidden}}
+.ra2-grain{position:absolute;inset:-60px;background-image:url(assets/img/grain.png);background-size:256px 256px;opacity:.55;pointer-events:none;animation:ra2Grain .7s steps(5) infinite}
+@keyframes ra2Grain{0%{transform:translate(0,0)}20%{transform:translate(-18px,12px)}40%{transform:translate(14px,-20px)}60%{transform:translate(-10px,-6px)}80%{transform:translate(20px,16px)}100%{transform:translate(0,0)}}
+
+/* Hero copy entrance */
+.ra2-in{opacity:0;transform:translateY(18px);animation:ra2In 1s cubic-bezier(.16,1,.3,1) forwards}
+.ra2-d1{animation-delay:3.45s}.ra2-d2{animation-delay:3.6s}.ra2-d3{animation-delay:3.75s}.ra2-d4{animation-delay:3.9s}
+@keyframes ra2In{to{opacity:1;transform:translateY(0)}}
+
+/* Buttons, nav, language */
+.ra2-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;border:0;cursor:pointer;font:700 15px/1 Arial,Helvetica,sans-serif;text-decoration:none;transition:background .2s ease,color .2s ease}
+.ra2-btn-leaf{background:#88B53A;color:#102418}.ra2-btn-leaf:hover{background:#9CC94C;color:#102418}
+.ra2-btn-line{box-shadow:inset 0 0 0 1.5px currentColor;color:#F6F5EF;background:transparent}.ra2-btn-line:hover{background:rgba(246,245,239,.1);color:#F6F5EF}
+.ra2-nav a{color:#F6F5EF;text-decoration:none;font:400 17px/1 Arial,Helvetica,sans-serif;padding:14px 2px;background-image:linear-gradient(#88B53A,#88B53A);background-size:0 1.5px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .3s ease}
+.ra2-nav a:hover{background-size:100% 1.5px;color:#F6F5EF}
+.ra2-lang{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-width:44px;min-height:44px;padding:0 6px;background:none;border:0;cursor:pointer;color:rgba(246,245,239,.6);font:700 15px/1 Arial,Helvetica,sans-serif;letter-spacing:.06em}
+.ra2-lang:hover{color:#F6F5EF}
+.ra2-lang-on{color:#F6F5EF;text-decoration:underline;text-decoration-color:#88B53A;text-decoration-thickness:2px;text-underline-offset:6px}
+
+/* Header */
+.ra2-head{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:26px 48px;transition:background-color .35s ease,padding .35s ease,box-shadow .35s ease}
+.ra2-head-solid{background-color:rgba(16,36,24,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding-top:14px;padding-bottom:14px;box-shadow:0 1px 0 rgba(246,245,239,.1)}
+.ra2-logo-img{height:40px;width:auto;display:block;transition:height .35s ease}
+.ra2-head-solid .ra2-logo-img{height:34px}
+.ra2-head-right{display:flex;align-items:center;gap:18px;flex:none}
+.ra2-head-cta{min-height:50px;padding:0 26px;font-size:16px}
+.ra2-burger{display:none;width:48px;height:48px;align-items:center;justify-content:center;background:none;border:1.5px solid rgba(246,245,239,.5);border-radius:999px;color:#F6F5EF;cursor:pointer;padding:0}
+.ra2-burger svg{display:block}
+.ra2-menu{position:fixed;inset:0;z-index:49;background:#102418;padding:112px 24px 40px;display:flex;flex-direction:column;overflow-y:auto;animation:ra2MenuIn .3s ease}
+.ra2-menu-link{color:#F6F5EF;text-decoration:none;font-family:'Host Grotesk',Arial,sans-serif;font-weight:700;font-size:38px;line-height:1.1;letter-spacing:-0.03em;padding:14px 0;border-bottom:1px solid rgba(246,245,239,.15)}
+.ra2-menu-link:hover{color:#88B53A}
+@keyframes ra2MenuIn{from{opacity:0}to{opacity:1}}
+
+/* Inline video pills in the statement */
+.ra2-pill{display:inline-block;position:relative;overflow:hidden;vertical-align:-0.1em;width:2.5em;height:0.92em;border-radius:999px;margin:0 .12em;background:#2E4236;box-shadow:inset 0 0 0 1px rgba(16,36,24,.12)}
+.ra2-pill video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.05)}
+
+/* Services accordion */
+.ra2-acc-btn{width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:28px 0;background:none;border:0;border-top:1px solid #C9CCBF;cursor:pointer;text-align:left;color:#102418;font-family:'Host Grotesk',Arial,sans-serif}
+.ra2-acc-btn:hover .ra2-acc-name{color:#4F7A1C}
+.ra2-acc-name{font-weight:700;font-size:clamp(24px,2.2vw,32px);line-height:1.1;letter-spacing:-0.02em;transition:color .2s ease}
+.ra2-acc-sign{font:400 15px/1 Arial,Helvetica,sans-serif;color:#2E4236;flex:none}
+.ra2-acc-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:40px;padding:4px 0 44px;animation:ra2Open .5s cubic-bezier(.16,1,.3,1)}
+@keyframes ra2Open{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.ra2-acc-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:4px}
+
+/* Process line */
+@supports (animation-timeline: view()){
+.ra2-proc-fill{transform-origin:left;animation:ra2Fill linear both;animation-timeline:view();animation-range:entry 40% cover 55%}
+@keyframes ra2Fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+}
+
+/* Project index */
+.ra2-row{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:24px;align-items:baseline;padding:26px 0;border-top:1px solid rgba(246,245,239,.18);color:#F6F5EF;text-decoration:none}
+.ra2-row:hover{color:#F6F5EF}
+.ra2-row-name{font-family:'Host Grotesk',Arial,sans-serif;font-weight:600;font-size:26px;line-height:1.1;letter-spacing:-0.02em;transition:transform .35s cubic-bezier(.16,1,.3,1),color .2s ease}
+.ra2-row:hover .ra2-row-name{transform:translateX(14px);color:#88B53A}
+.ra2-thumb{position:absolute;right:22%;top:50%;width:300px;aspect-ratio:4/3;object-fit:cover;border-radius:4px;opacity:0;transform:translateY(-50%) scale(.92) rotate(-2deg);transition:opacity .25s ease,transform .45s cubic-bezier(.16,1,.3,1);pointer-events:none;z-index:3}
+.ra2-row:hover .ra2-thumb{opacity:1;transform:translateY(-50%) scale(1) rotate(0deg)}
+.ra2-row-img{display:none}
+
+/* Client logos from one sprite */
+.ra2-logo{background-image:url(assets/img/clientes/clientes-sprite.png);background-repeat:no-repeat;background-size:2275.5px 60px;height:60px;opacity:.8}
+
+/* Form */
+.ra2-field{display:flex;flex-direction:column;gap:6px}
+.ra2-field label{font-size:13px;color:#2E4236}
+.ra2-field input,.ra2-field textarea{font:400 18px/1.4 Arial,Helvetica,sans-serif;color:#102418;background:transparent;border:0;border-bottom:1.5px solid #102418;padding:10px 0;min-height:48px;border-radius:0}
+.ra2-field textarea{min-height:96px;resize:vertical}
+
+/* Wide screens: content stays in a centred 1344px column */
+.ra2-sec>*{max-width:1344px;margin-left:auto !important;margin-right:auto !important}
+.ra2-hero-copy{left:max(48px,calc((100% - 1344px) / 2)) !important;right:max(48px,calc((100% - 1344px) / 2)) !important}
+.ra2-head{padding-left:max(48px,calc((100% - 1344px) / 2));padding-right:max(48px,calc((100% - 1344px) / 2))}
+
+@media (max-width:980px){
+.ra2-g12{grid-template-columns:minmax(0,1fr) !important;row-gap:20px !important}
+.ra2-g12>*{grid-column:auto !important}
+.ra2-proc-line{display:none !important}
+.ra2-sec{padding-top:72px !important;padding-bottom:72px !important}
+footer.ra2-sec{padding-top:40px !important;padding-bottom:40px !important}
+.ra2-env-img{min-height:340px !important}
+.ra2-hero{height:680px !important}
+.ra2-intro-photo{transform:none;animation:ra2PhotoOut 1s ease 4s forwards}
+.ra2-head-right{gap:8px}
+.ra2-lang{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-width:40px}
+.ra2-nav{display:none !important}
+.ra2-hide-m{display:none !important}
+.ra2-g3,.ra2-g2,.ra2-g5{grid-template-columns:minmax(0,1fr) !important}
+.ra2-acc-body{grid-template-columns:minmax(0,1fr)}
+.ra2-row{grid-template-columns:minmax(0,1fr)}
+.ra2-thumb{display:none}
+.ra2-row{gap:8px !important;padding:28px 0 !important}
+.ra2-row-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;margin-bottom:10px}
+.ra2-sec{padding-left:20px !important;padding-right:20px !important}
+.ra2-logos{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+.ra2-hero-copy{left:20px !important;right:20px !important}
+.ra2-head{padding:16px 20px !important}
+.ra2-head-cta{display:none !important}
+.ra2-burger{display:inline-flex !important}
+.ra2-logo-img{height:26px !important}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.ra2-under,.ra2-cut,.ra2-intro-photo{display:none}
+.ra2-vid,.ra2-pill video{display:none}
+.ra2-grain,.ra2-proc-fill{animation:none !important}
+.ra2-in{animation:none;opacity:1;transform:none}
+.ra2-acc-body{animation:none}
+}
+</style>
+
+</head>
+<body>
+
+<div style="width: 100%; position: relative; background: #F6F5EF; color: #102418; font-family: Arial, Helvetica, 'Liberation Sans', sans-serif; overflow-x: clip">
+
+<div aria-hidden="true" class="ra2-under"></div>
+
+<!-- HEADER (fixed; turns solid on scroll) -->
+<header class="r a 2 - i n   r a 2 - d 1   r a 2 - h e a d">
+<a aria-label="Río Alto" href="#inicio" style="display: block; line-height: 0; flex: none"><img alt="Río Alto" class="ra2-logo-img" src="assets/img/logo-rioalto.png"/></a>
+<nav aria-label="Principal" class="ra2-nav" style="display: flex; gap: 40px">
+<a href="#servicios">Servicios</a>
+<a href="#proceso">Proceso</a>
+<a href="#medioambiente">Medioambiente</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#seguridad">Seguridad</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<div class="ra2-head-right">
+<div aria-label="Idioma" role="group" style="display: flex; align-items: center">
+<a aria-current="true" class="ra2-lang ra2-lang-on" href="./" hreflang="es" lang="es">ES</a>
+<span aria-hidden="true" style="color: rgba(246,245,239,0.35)">/</span>
+<a class="ra2-lang" href="en/" hreflang="en" lang="en">EN</a>
+</div>
+<a class="ra2-btn ra2-btn-leaf ra2-head-cta" href="#contacto">Cotizar</a>
+<button aria-controls="ra2-menu" aria-expanded="false" aria-label="Abrir menú" class="ra2-burger" data-close-label="Cerrar menú" data-open-label="Abrir menú" type="button">
+<svg aria-hidden="true" class="ra2-ico-close" fill="none" height="20" hidden="" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 20 20" width="20"><path d="M4 4l12 12M16 4L4 16"></path></svg>
+<svg aria-hidden="true" class="ra2-ico-open" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 20 20" width="20"><path d="M3 6h14M3 14h14"></path></svg>
+</button>
+</div>
+</header>
+
+<div class="ra2-menu" hidden="" id="ra2-menu">
+<nav aria-label="Principal" style="display: flex; flex-direction: column">
+<a class="ra2-menu-link" href="#servicios">Servicios</a>
+<a class="ra2-menu-link" href="#proceso">Proceso</a>
+<a class="ra2-menu-link" href="#medioambiente">Medioambiente</a>
+<a class="ra2-menu-link" href="#proyectos">Proyectos</a>
+<a class="ra2-menu-link" href="#seguridad">Seguridad</a>
+<a class="ra2-menu-link" href="#contacto">Contacto</a>
+</nav>
+<a class="ra2-btn ra2-btn-leaf" href="#contacto" style="margin-top: 32px; align-self: flex-start">Cotizar un proyecto</a>
+</div>
+
+<!-- HERO -->
+<section class="ra2-hero" id="inicio" style="position: relative; z-index: 41; height: 820px; background: #102418; color: #F6F5EF; overflow: hidden">
+<div aria-hidden="true" class="ra2-media">
+<video autoplay="autoplay" class="ra2-vid" loop="loop" muted="muted" playsinline="playsinline" poster="assets/img/hero-poster.jpg" preload="auto"><source src="assets/video/hero-loop-720-movil.mp4" type="video/mp4" media="(max-width: 980px)"><source src="assets/video/hero-loop-1080.mp4" type="video/mp4"></video>
+<div class="ra2-intro-photo"></div>
+<div style="position: absolute; inset: 0; background: rgba(16,36,24,0.38)"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 0; height: 60%; background: linear-gradient(180deg, rgba(16,36,24,0) 0%, rgba(16,36,24,0.88) 100%)"></div>
+<div class="ra2-grain"></div>
+</div>
+
+<div aria-hidden="true" class="ra2-cut">
+<svg aria-hidden="true" class="ra2-cut-svg" viewbox="0 0 382 382"><path d="M-30000,-30000 L30382,-30000 L30382,30382 L-30000,30382 Z M379,2 L178,2 L177,3 L172,3 L166,5 L154,6 L124,16 L105,25 L100,29 L92,33 L68,51 L68,52 L49,70 L47,74 L45,75 L44,78 L39,83 L38,87 L34,90 L34,92 L29,98 L29,100 L23,109 L23,111 L21,113 L21,115 L14,128 L14,131 L9,143 L9,146 L7,150 L7,154 L4,162 L4,166 L3,167 L4,169 L3,170 L2,185 L1,186 L1,338 L2,339 L2,347 L3,347 L4,345 L4,342 L6,339 L6,335 L10,325 L10,322 L16,308 L19,297 L21,295 L22,290 L31,272 L38,261 L50,245 L66,228 L87,210 L109,195 L125,187 L127,185 L143,178 L145,176 L148,176 L150,174 L153,174 L170,166 L176,165 L179,163 L182,163 L197,157 L200,157 L204,155 L215,153 L219,151 L222,151 L239,146 L250,145 L251,144 L266,142 L267,141 L272,141 L273,140 L278,140 L279,139 L293,138 L294,137 L300,137 L301,136 L309,136 L310,135 L321,135 L322,134 L324,135 L326,134 L363,134 L364,135 L366,134 L367,135 L368,134 L369,135 L372,134 L375,136 L345,147 L338,151 L333,152 L331,154 L329,154 L299,169 L297,169 L282,178 L271,183 L265,188 L260,190 L236,206 L235,208 L231,210 L206,231 L192,245 L180,259 L178,263 L176,264 L175,267 L173,268 L172,271 L169,274 L156,298 L156,300 L151,311 L151,314 L148,322 L147,332 L146,333 L146,339 L145,340 L145,361 L146,362 L146,368 L147,369 L149,381 L150,380 L194,380 L195,379 L200,379 L201,380 L202,379 L214,378 L219,376 L231,374 L244,369 L253,367 L258,364 L260,364 L262,362 L267,361 L269,359 L275,357 L300,341 L308,335 L311,331 L315,329 L318,325 L329,315 L330,312 L335,308 L347,291 L355,276 L358,273 L360,266 L366,255 L369,246 L369,243 L371,240 L372,234 L375,227 L376,215 L377,214 L378,202 L379,201 L379,5 L380,4 Z" fill="#102418" fill-rule="evenodd"></path></svg>
+<img alt="" class="ra2-cut-word" src="assets/img/logo-wordmark.png"/>
+</div>
+
+<div class="ra2-hero-copy ra2-g12" style="position: absolute; z-index: 6; left: 48px; right: 48px; bottom: 56px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; align-items: end">
+<div style="grid-column: 1 / span 8">
+<h1 class="ra2-in ra2-d2" style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(40px, 5.6vw, 84px); line-height: 0.98; letter-spacing: -0.035em">Demolemos, reciclamos y trazamos cada carga.</h1>
+<div class="ra2-in ra2-d3" style="margin-top: 30px; display: flex; gap: 28px; align-items: center; flex-wrap: wrap">
+<a class="ra2-btn ra2-btn-leaf" href="#contacto">Cotizar un proyecto</a>
+<p style="margin: 0; max-width: 420px; font-size: 16px; line-height: 1.5; color: rgba(246,245,239,0.85)">Demolición, desmantelamiento y gestión de RCD para minería, industria y construcción, de norte a sur de Chile.</p>
+</div>
+</div>
+<div class="ra2-in ra2-d4 ra2-hide-m" style="grid-column: 10 / span 3">
+<p style="margin: 0; font-size: 13px; color: rgba(246,245,239,0.7)">Faenas activas</p>
+<p style="margin: 6px 0 0; font-size: 16px; font-weight: 700">De Tarapacá a O’Higgins</p>
+</div>
+</div>
+</section>
+<!-- STATEMENT -->
+<section class="ra2-sec" style="padding: 112px 48px 96px">
+<div class="ra2-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
+<p style="grid-column: 1 / span 10; margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 500; font-size: clamp(24px, 2.8vw, 42px); line-height: 1.22; letter-spacing: -0.03em; color: #102418">Desde 2024 hemos dispuesto más de 15.000 toneladas de material ferroso y gestionado más de 200.000 m³ de RCD en Chile, y cada carga sale de faena con su certificado de disposición final, listo para respaldar tu cumplimiento ante la autoridad.</p>
+</div>
+<div class="ra2-g3" style="margin-top: 88px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="border-top: 1px solid #102418; padding-top: 18px">
+<p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -0.035em">+<span class="ra2-count" data-target="40">40</span></p>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.45; color: #2E4236">proyectos ejecutados</p>
+</div>
+<div style="border-top: 1px solid #102418; padding-top: 18px">
+<p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -0.035em">+<span class="ra2-count" data-target="15000">15.000</span></p>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.45; color: #2E4236">toneladas de material ferroso dispuestas desde 2024</p>
+</div>
+<div style="border-top: 1px solid #102418; padding-top: 18px">
+<p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -0.035em">+<span class="ra2-count" data-target="200000">200.000</span></p>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.45; color: #2E4236">m³ de RCD gestionados</p>
+</div>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="ra2-sec" id="servicios" style="padding: 32px 48px 112px">
+<div class="ra2-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-bottom: 36px">
+<h2 style="grid-column: 1 / span 4; margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em; color: #102418">Servicios</h2>
+<p style="grid-column: 5 / span 6; margin: 0; align-self: end; font-size: 19px; line-height: 1.55; color: #2E4236">Un solo contratista desde el primer golpe hasta el certificado. Maquinaria propia y profesionales con más de 20 años de experiencia en faenas mineras.</p>
+</div>
+<div style="border-bottom: 1px solid #C9CCBF">
+
+<div>
+<button aria-controls="svc-0" aria-expanded="true" class="ra2-acc-btn" data-acc="0" type="button">
+<span class="ra2-acc-name">Demolición</span>
+<span class="ra2-acc-sign">Cerrar</span>
+</button>
+
+<div class="ra2-acc-body" data-acc-body="0" id="svc-0">
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2E4236; max-width: 520px">Demoliciones masivas y de interiores, y desmantelamiento mecanizado de plantas, estanques e instalaciones de faena.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Desmantelamiento mecanizado</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Demoliciones masivas</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Corte e hilo diamantado</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Desmantelamiento de instalaciones de faena</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Cierres perimetrales</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Gestión y tramitación de permisos</li>
+
+</ul>
+<img alt="Excavadora de alto alcance de Río Alto demoliendo en Rancagua" class="ra2-acc-img" src="assets/img/servicios/demolicion.jpg"/>
+</div>
+
+</div>
+
+<div>
+<button aria-controls="svc-1" aria-expanded="false" class="ra2-acc-btn" data-acc="1" type="button">
+<span class="ra2-acc-name">Gestión de RCD</span>
+<span class="ra2-acc-sign">Ver detalle</span>
+</button>
+
+<div class="ra2-acc-body" data-acc-body="1" hidden="" id="svc-1">
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2E4236; max-width: 520px">Segregamos, transportamos y gestionamos la disposición final de RCD, material ferroso y RESPEL, con trazabilidad completa.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Disposición final de ferroso y no ferroso</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Transporte de residuos peligrosos y no peligrosos</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Inertización de residuos contaminados (RESPEL)</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Segregación mecanizada en obra</li>
+
+</ul>
+<img alt="Excavadora de Río Alto desmantelando un tanque en Planta Concón, ENAP" class="ra2-acc-img" src="assets/img/servicios/gestion-rcd.jpg"/>
+</div>
+
+</div>
+
+<div>
+<button aria-controls="svc-2" aria-expanded="false" class="ra2-acc-btn" data-acc="2" type="button">
+<span class="ra2-acc-name">Movimiento de tierra</span>
+<span class="ra2-acc-sign">Ver detalle</span>
+</button>
+
+<div class="ra2-acc-body" data-acc-body="2" hidden="" id="svc-2">
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2E4236; max-width: 520px">Excavaciones y obras previas para liberar el terreno y dejarlo listo para la siguiente etapa de obra.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Excavaciones masivas</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Saneamiento ambiental de activos industriales</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Pilas de socalzado</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Anclajes</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Gestión y disposición final de RCD</li>
+
+</ul>
+<img alt="Vista aérea de una excavadora cargando un camión tolva en una faena de movimiento de tierra" class="ra2-acc-img" src="assets/img/servicios/movimiento-de-tierra.jpg"/>
+</div>
+
+</div>
+
+<div>
+<button aria-controls="svc-3" aria-expanded="false" class="ra2-acc-btn" data-acc="3" type="button">
+<span class="ra2-acc-name">Reciclaje y medioambiente</span>
+<span class="ra2-acc-sign">Ver detalle</span>
+</button>
+
+<div class="ra2-acc-body" data-acc-body="3" hidden="" id="svc-3">
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #2E4236; max-width: 520px">Compramos y recuperamos material ferroso en todo Chile y lo devolvemos a la cadena de reciclaje, con cada carga certificada.</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Compra de material ferroso en todas sus formas</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Inertización de ferroso contaminado (estanques de combustible, generadores, maquinaria)</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Acopio en obra con contenedores de 8 a 20 m³</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Retiro con camiones autorizados por la SEREMI de Salud</li>
+
+<li style="display: flex; gap: 12px; font-size: 15px; line-height: 1.45"><img alt="" src="assets/img/isotipo.png" style="width: 14px; height: 14px; flex: none; margin-top: 3px"/>Certificado de disposición final</li>
+
+</ul>
+<img alt="Cargador moviendo chatarra ferrosa en un patio de reciclaje" class="ra2-acc-img" src="assets/img/servicios/reciclaje.jpg"/>
+</div>
+
+</div>
+
+</div>
+</section>
+<!-- PROCESS -->
+<section class="ra2-sec" id="proceso" style="position: relative; background: #102418; color: #F6F5EF; padding: 104px 48px; overflow: hidden">
+<div class="ra2-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px">
+<h2 style="grid-column: 1 / span 7; margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em">La ruta de cada carga, documentada.</h2>
+<p style="grid-column: 9 / span 4; margin: 0; align-self: end; font-size: 17px; line-height: 1.55; color: rgba(246,245,239,0.8)">Separamos el material en faena y lo enviamos en camiones autorizados por la SEREMI de Salud a un destino final autorizado. Tú recibes el certificado.</p>
+</div>
+<div style="position: relative; margin-top: 80px">
+<div aria-hidden="true" class="ra2-proc-line" style="position: absolute; left: 0; right: 0; top: 7px; height: 2px; background: rgba(246,245,239,0.16)">
+<div class="ra2-proc-fill" style="height: 100%; background: #88B53A"></div>
+</div>
+<ol class="ra2-g5" style="list-style: none; margin: 0; padding: 0; position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px">
+
+<li><span aria-hidden="true" style="display: block; width: 16px; height: 16px; border-radius: 999px; background: #88B53A"></span><p style="margin: 28px 0 0; font-size: 13px; color: rgba(246,245,239,0.6)">1</p><h3 style="margin: 6px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Levantamiento y permisos</h3><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Inspección, plan de trabajo y permisos antes de entrar con máquinas.</p></li>
+
+<li><span aria-hidden="true" style="display: block; width: 16px; height: 16px; border-radius: 999px; background: #88B53A"></span><p style="margin: 28px 0 0; font-size: 13px; color: rgba(246,245,239,0.6)">2</p><h3 style="margin: 6px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Demolición controlada</h3><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Equipos propios y estándar de seguridad de faena minera.</p></li>
+
+<li><span aria-hidden="true" style="display: block; width: 16px; height: 16px; border-radius: 999px; background: #88B53A"></span><p style="margin: 28px 0 0; font-size: 13px; color: rgba(246,245,239,0.6)">3</p><h3 style="margin: 6px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Segregación en obra</h3><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Ferroso, no ferroso, RCD y RESPEL, cada uno con su ruta.</p></li>
+
+<li><span aria-hidden="true" style="display: block; width: 16px; height: 16px; border-radius: 999px; background: #88B53A"></span><p style="margin: 28px 0 0; font-size: 13px; color: rgba(246,245,239,0.6)">4</p><h3 style="margin: 6px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Transporte autorizado</h3><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Camiones autorizados por la SEREMI de Salud y contenedores de 8 a 20 m³ en obra.</p></li>
+
+<li><span aria-hidden="true" style="display: block; width: 16px; height: 16px; border-radius: 999px; background: #88B53A"></span><p style="margin: 28px 0 0; font-size: 13px; color: rgba(246,245,239,0.6)">5</p><h3 style="margin: 6px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Disposición y certificado</h3><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Destino final autorizado y certificado para tu carpeta.</p></li>
+
+</ol>
+</div>
+<div class="ra2-g2" style="margin-top: 88px; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px; align-items: stretch">
+<div style="position: relative; border-radius: 4px; overflow: hidden; min-height: 360px; background: #1E3A2A"><video aria-hidden="true" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" src="assets/video/proceso-loop-720.mp4" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video></div>
+<div style="background: #F6F5EF; color: #102418; border-radius: 4px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px">
+<div>
+<p style="margin: 0; font-size: 13px; color: #4F7A1C; font-weight: 700">Ejemplo</p>
+<p style="margin: 8px 0 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.02em">Certificado de disposición final</p>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; font-size: 15px">
+
+<div><dt style="color: #4B5E52; font-size: 13px">Generador</dt><dd style="margin: 4px 0 0; font-weight: 700">Tu empresa y faena</dd></div>
+
+<div><dt style="color: #4B5E52; font-size: 13px">Material</dt><dd style="margin: 4px 0 0; font-weight: 700">Ferroso</dd></div>
+
+<div><dt style="color: #4B5E52; font-size: 13px">Cantidad</dt><dd style="margin: 4px 0 0; font-weight: 700">Toneladas según romana</dd></div>
+
+<div><dt style="color: #4B5E52; font-size: 13px">Transporte</dt><dd style="margin: 4px 0 0; font-weight: 700">Autorizado por la SEREMI de Salud</dd></div>
+
+<div><dt style="color: #4B5E52; font-size: 13px">Destino final</dt><dd style="margin: 4px 0 0; font-weight: 700">Instalación autorizada</dd></div>
+
+<div><dt style="color: #4B5E52; font-size: 13px">N° certificado</dt><dd style="margin: 4px 0 0; font-weight: 700">Folio único</dd></div>
+
+</dl>
+</div>
+</div>
+</section>
+<!-- ENVIRONMENT + RECYCLING -->
+<section class="ra2-sec" id="medioambiente" style="background: #88B53A; color: #102418; padding: 104px 48px">
+<div class="ra2-g2" style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: stretch">
+<div style="display: flex; flex-direction: column">
+<h2 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em">Medioambiente y reciclaje</h2>
+<p style="margin: 24px 0 0; max-width: 560px; font-size: 19px; line-height: 1.55">Separamos el material en obra para recuperar todo lo que se puede reciclar y llevar el resto a destinos autorizados, con trazabilidad completa de cada carga.</p>
+<div style="margin-top: 40px; display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap">
+<p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 52px; line-height: 1; letter-spacing: -0.035em">+<span class="ra2-count" data-target="15000">15.000</span></p>
+<p style="margin: 0; max-width: 300px; font-size: 15px; line-height: 1.45">toneladas de material ferroso dispuestas con certificado desde 2024</p>
+</div>
+<div class="ra2-g2" style="margin-top: auto; padding-top: 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px">
+
+<div style="border-top: 1.5px solid #102418; padding: 18px 0 26px"><h3 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Compra de material ferroso</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5">Compramos chatarra y material ferroso en todas sus formas, a lo largo de Chile.</p></div>
+
+<div style="border-top: 1.5px solid #102418; padding: 18px 0 26px"><h3 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Ferroso contaminado</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5">Gestionamos la inertización de estanques de petróleo, generadores y maquinaria antes de reciclarlos.</p></div>
+
+<div style="border-top: 1.5px solid #102418; padding: 18px 0 26px"><h3 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Acopio en obra</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5">Contenedores de 8 a 20 m³ en tu obra y retiro con camiones autorizados por la SEREMI de Salud.</p></div>
+
+<div style="border-top: 1.5px solid #102418; padding: 18px 0 26px"><h3 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em">Saneamiento ambiental</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5">Recuperamos terrenos y activos industriales, con los RESPEL gestionados según la normativa.</p></div>
+
+</div>
+</div>
+<div class="ra2-env-img" style="border-radius: 4px; overflow: hidden; min-height: 520px; background: #102418"><img alt="Acopio de material ferroso listo para reciclaje" src="assets/img/reciclaje-hierro.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block"/></div>
+</div>
+</section>
+<!-- PROJECT INDEX -->
+<section class="ra2-sec" id="proyectos" style="background: #0F2117; color: #F6F5EF; padding: 32px 48px 112px">
+<div class="ra2-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-bottom: 36px; padding-top: 80px; border-top: 1px solid rgba(246,245,239,0.12)">
+<h2 style="grid-column: 1 / span 6; margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em">Proyectos destacados</h2>
+<p style="grid-column: 9 / span 4; margin: 0; align-self: end; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.7)">Una selección de faenas mineras, plantas industriales y obras urbanas.</p>
+</div>
+<div class="ra2-row ra2-hide-m" style="padding: 0 0 12px; border-top: 0; font-size: 13px; color: rgba(246,245,239,0.55)">
+<span>Proyecto</span><span>Servicio</span><span>Cifras</span>
+</div>
+<div style="border-bottom: 1px solid rgba(246,245,239,0.18)">
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Quebrada Blanca, Teck" class="ra2-row-img" src="assets/img/proyectos/quebrada-blanca.jpg"/>
+<span class="ra2-row-name">Quebrada Blanca, Teck</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Demolición masiva, carga y disposición final</span>
+<span style="font-size: 15px; font-weight: 700">+20.000 m³ y +6.000 ton ferroso</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/quebrada-blanca.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Cota 4.000, Codelco Andina" class="ra2-row-img" src="assets/img/proyectos/cota-4000.jpg"/>
+<span class="ra2-row-name">Cota 4.000, Codelco Andina</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Carga y disposición final</span>
+<span style="font-size: 15px; font-weight: 700">+2.000 ton ferroso</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/cota-4000.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Cenco Rancagua" class="ra2-row-img" src="assets/img/proyectos/cenco-rancagua.jpg"/>
+<span class="ra2-row-name">Cenco Rancagua</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Demolición masiva</span>
+<span style="font-size: 15px; font-weight: 700">+8.000 m³ RCD</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/cenco-rancagua.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Puerto Michilla" class="ra2-row-img" src="assets/img/proyectos/puerto-michilla.jpg"/>
+<span class="ra2-row-name">Puerto Michilla</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Carga y disposición final</span>
+<span style="font-size: 15px; font-weight: 700">+2.000 ton ferroso</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/puerto-michilla.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Aguas Antofagasta" class="ra2-row-img" src="assets/img/proyectos/aguas-antofagasta.jpg"/>
+<span class="ra2-row-name">Aguas Antofagasta</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Desmantelamiento de estanque</span>
+<span style="font-size: 15px; font-weight: 700">+600 ton ferroso</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/aguas-antofagasta.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Planta Concón, ENAP" class="ra2-row-img" src="assets/img/proyectos/planta-concon.jpg"/>
+<span class="ra2-row-name">Planta Concón, ENAP</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Desmantelamiento de estanque</span>
+<span style="font-size: 15px; font-weight: 700">+420 ton ferroso</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/planta-concon.jpg"/>
+</a>
+
+<a class="ra2-row" href="#proyectos">
+<img alt="Claudio Arrau 9494, Pudahuel" class="ra2-row-img" src="assets/img/proyectos/pudahuel.jpg"/>
+<span class="ra2-row-name">Claudio Arrau 9494, Pudahuel</span>
+<span style="font-size: 15px; color: rgba(246,245,239,0.75)">Demolición masiva</span>
+<span style="font-size: 15px; font-weight: 700">+2.200 m³ RCD</span>
+<img alt="" class="ra2-thumb" src="assets/img/proyectos/pudahuel.jpg"/>
+</a>
+
+</div>
+</section>
+<!-- CLIENTS -->
+<section class="ra2-sec" style="padding: 96px 48px">
+<div class="ra2-g12" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; margin-bottom: 48px">
+<h2 style="grid-column: 1 / span 4; margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em">Clientes</h2>
+<p style="grid-column: 5 / span 6; margin: 0; align-self: end; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 500; font-size: 24px; line-height: 1.3; letter-spacing: -0.015em">Mineras, constructoras e industrias que confían su demolición y sus residuos a Río Alto.</p>
+</div>
+<div class="ra2-logos" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid #C9CCBF; border-left: 1px solid #C9CCBF">
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Codelco" class="ra2-logo" role="img" style="width: 78.5px; background-position: -27.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Teck" class="ra2-logo" role="img" style="width: 121px; background-position: -161px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+
+<img alt="Empresas Copec" src="assets/img/clientes/empresas-copec.png" style="width: 190px; max-width: 82%; height: auto; display: block; opacity: 0.8"/>
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+
+
+<span style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.04em; color: #102418; opacity: 0.8">AMECO</span>
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Flesan" class="ra2-logo" role="img" style="width: 150px; background-position: -337px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Enex" class="ra2-logo" role="img" style="width: 134.5px; background-position: -542px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Conecta" class="ra2-logo" role="img" style="width: 145.5px; background-position: -731.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Aceros AZA" class="ra2-logo" role="img" style="width: 103.5px; background-position: -932px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Metallum" class="ra2-logo" role="img" style="width: 74px; background-position: -1090.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Echeverría Izquierdo" class="ra2-logo" role="img" style="width: 144px; background-position: -1219.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Indumotora" class="ra2-logo" role="img" style="width: 120px; background-position: -1418.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Ariztía" class="ra2-logo" role="img" style="width: 101px; background-position: -1593.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Vía Limpia" class="ra2-logo" role="img" style="width: 150px; background-position: -1749.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Gesvial" class="ra2-logo" role="img" style="width: 88.5px; background-position: -1954.5px 0px"></div>
+
+
+</div>
+
+<div style="border-right: 1px solid #C9CCBF; border-bottom: 1px solid #C9CCBF; height: 150px; display: flex; align-items: center; justify-content: center">
+<div aria-label="Confuturo" class="ra2-logo" role="img" style="width: 150px; background-position: -2098px 0px"></div>
+
+
+</div>
+
+</div>
+</section>
+<!-- SAFETY -->
+<section class="ra2-sec" id="seguridad" style="background: #102418; color: #F6F5EF; padding: 104px 48px">
+<div class="ra2-g2" style="display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 80px; align-items: start">
+<div>
+<h2 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 54px); line-height: 1.02; letter-spacing: -0.03em">Seguridad que se puede auditar.</h2>
+<p style="margin: 24px 0 0; font-size: 17px; line-height: 1.55; color: rgba(246,245,239,0.8); max-width: 440px">Personal con EPP completo y cada etapa documentada, para que tu equipo de seguridad pueda revisarla.</p>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(246,245,239,0.25)">
+
+<li style="display: flex; gap: 18px; padding: 24px 0; border-bottom: 1px solid rgba(246,245,239,0.25)"><img alt="" src="assets/img/isotipo.png" style="width: 18px; height: 18px; flex: none; margin-top: 5px"/><div><p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Estándar de faena minera</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Procedimientos y supervisión al nivel que exigen las mineras, también en obra urbana.</p></div></li>
+
+<li style="display: flex; gap: 18px; padding: 24px 0; border-bottom: 1px solid rgba(246,245,239,0.25)"><img alt="" src="assets/img/isotipo.png" style="width: 18px; height: 18px; flex: none; margin-top: 5px"/><div><p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Maquinaria propia</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Equipos de alto estándar con disponibilidad comprometida en contrato.</p></div></li>
+
+<li style="display: flex; gap: 18px; padding: 24px 0; border-bottom: 1px solid rgba(246,245,239,0.25)"><img alt="" src="assets/img/isotipo.png" style="width: 18px; height: 18px; flex: none; margin-top: 5px"/><div><p style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.01em">Transporte autorizado</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.5; color: rgba(246,245,239,0.75)">Camiones certificados por la SEREMI de Salud para residuos peligrosos y no peligrosos.</p></div></li>
+
+</ul>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="ra2-sec" id="contacto" style="padding: 112px 48px 104px">
+<div class="ra2-g2" style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px">
+<div>
+<h2 style="margin: 0; font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 700; font-size: clamp(40px, 4.8vw, 72px); line-height: 0.98; letter-spacing: -0.035em">Hablemos de tu proyecto.</h2>
+<div style="margin-top: 48px; display: flex; flex-direction: column; gap: 22px">
+<div><p style="margin: 0 0 6px; font-size: 13px; color: #2E4236">Correo</p><a href="mailto:contacto@empresasrioalto.cl" style="font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: clamp(22px, 2.2vw, 32px); letter-spacing: -0.02em; color: #102418; text-underline-offset: 6px; text-decoration-thickness: 1.5px">contacto@empresasrioalto.cl</a></div>
+<div><p style="margin: 0 0 6px; font-size: 13px; color: #2E4236">Teléfono</p><a href="tel:+56977594278" style="font-family: 'Host Grotesk', Arial, sans-serif; font-weight: 600; font-size: clamp(22px, 2.2vw, 32px); letter-spacing: -0.02em; color: #102418; text-underline-offset: 6px; text-decoration-thickness: 1.5px">+56 9 7759 4278</a></div>
+</div>
+</div>
+<form aria-label="Solicitud de cotización" style="display: flex; flex-direction: column; gap: 22px">
+<div class="ra2-field"><label for="v2-nombre">Nombre y empresa</label><input autocomplete="name" id="v2-nombre" type="text"/></div>
+<div class="ra2-field"><label for="v2-correo">Correo</label><input autocomplete="email" id="v2-correo" type="email"/></div>
+<div class="ra2-field"><label for="v2-tel">Teléfono</label><input autocomplete="tel" id="v2-tel" type="tel"/></div>
+<div class="ra2-field"><label for="v2-msg">Cuéntanos tu proyecto: qué necesitas, dónde y en qué plazo.</label><textarea id="v2-msg"></textarea></div>
+<button class="ra2-btn ra2-btn-leaf" style="align-self: flex-start; margin-top: 8px" type="button">Enviar solicitud</button>
+</form>
+</div>
+</section>
+<footer class="ra2-sec" style="background: #102418; color: rgba(246,245,239,0.75); padding: 48px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 14px">
+<img alt="Río Alto" src="assets/img/logo-rioalto.png" style="height: 30px; width: auto"/>
+<p style="margin: 0">Av. Las Condes 6930, Oficina 02, Las Condes, Santiago</p>
+<nav aria-label="Redes sociales" style="display: flex; gap: 22px"><a href="https://www.instagram.com/reciclaje_rio_alto/" style="color: #F6F5EF">Instagram @reciclaje_rio_alto</a></nav>
+</div>
+</footer>
+</div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Header turns solid on scroll
+  var head = document.querySelector('.ra2-head');
+  function onScroll() { if (head) head.classList.toggle('ra2-head-solid', (window.scrollY || 0) > 40 || menuOpen); }
+  var menuOpen = false;
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  // Mobile menu
+  var burger = document.querySelector('.ra2-burger'), menu = document.getElementById('ra2-menu');
+  function setMenu(open) {
+    menuOpen = open; if (!menu) return;
+    menu.hidden = !open; burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? burger.dataset.closeLabel : burger.dataset.openLabel);
+    burger.querySelector('.ra2-ico-close').hidden = !open; burger.querySelector('.ra2-ico-open').hidden = open;
+    onScroll();
+  }
+  if (burger) burger.addEventListener('click', function () { setMenu(!menuOpen); });
+  if (menu) menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  // Services accordion (one open at a time)
+  var btns = document.querySelectorAll('.ra2-acc-btn');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var i = b.dataset.acc, open = b.getAttribute('aria-expanded') === 'true';
+      btns.forEach(function (o) {
+        var body = document.querySelector('[data-acc-body="' + o.dataset.acc + '"]');
+        var on = (o.dataset.acc === i) && !open;
+        o.setAttribute('aria-expanded', on ? 'true' : 'false'); body.hidden = !on;
+        var sign = o.querySelector('.ra2-acc-sign');
+        if (sign) sign.textContent = on ? (document.documentElement.lang === 'en' ? 'Close' : 'Cerrar') : (document.documentElement.lang === 'en' ? 'View details' : 'Ver detalle');
+      });
+    });
+  });
+  // Count-up figures after the intro
+  var sep = document.documentElement.lang === 'en' ? ',' : '.';
+  function fmt(n) { return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep); }
+  var counts = document.querySelectorAll('.ra2-count');
+  if (!reduce) {
+    counts.forEach(function (c) { c.textContent = '0'; });
+    setTimeout(function () {
+      var start = null;
+      function step(t) {
+        if (start === null) start = t;
+        var k = Math.min(1, (t - start) / 1800), e = 1 - Math.pow(1 - k, 3);
+        counts.forEach(function (c) { c.textContent = fmt(+c.dataset.target * e); });
+        if (k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }, 3800);
+  }
+})();
+
+</script>
+</body>
+</html>
